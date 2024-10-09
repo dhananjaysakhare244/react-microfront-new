@@ -16,5 +16,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })], // integrates with index.html
+  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })], // integrates with index.htmlss
 };
