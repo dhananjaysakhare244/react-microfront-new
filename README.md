@@ -11,3 +11,12 @@ steps are different steps that happen during build deploy such as checout code i
 uses will checkout code from repo
 run will run commands
 aws s3 sync will sync the dist directory created by npm run build
+
+We need to add publicPath to tell webpack from where to load the scripts in s3
+Cloud front cache invalidation is required. We need to create an invalidation
+
+- run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/container/latest/index.html"
+  env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: us-east-2
