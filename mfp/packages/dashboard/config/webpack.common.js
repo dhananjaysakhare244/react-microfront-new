@@ -5,7 +5,7 @@ module.exports = {
     filename: "[name].[contenthash].js",
   },
   resolve: {
-    extension: [".js", ".vue"],
+    extensions: [".js", ".vue"],
   },
   module: {
     rules: [
