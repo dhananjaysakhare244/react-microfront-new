@@ -8,7 +8,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn }) => {
   const history =
     defaultHistory ||
     createMemoryHistory({
-      initialEntries: [initialPath], // the default path that memory history is gonna use
+      initialEntries: [initialPath], // the default path that memory history is gonna use.
     });
 
   //send out a notification to container that navigation happened in marketing
