@@ -5,6 +5,9 @@ const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 const devConfig = {
   mode: "development",
+  output: {
+    publicPath: "http://localhost:5000/",
+  },
   devServer: {
     port: "5000",
     historyApiFallback: {
