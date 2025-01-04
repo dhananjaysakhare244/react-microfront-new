@@ -15,6 +15,9 @@ export default () => {
         const { pathname } = history.location;
         if (pathname !== nextPathName) history.push(nextPathName);
       },
+      onSignIn: () => {
+        console.log("user signed in");
+      },
     });
 
     history.listen(onParentNavigate);
