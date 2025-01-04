@@ -1,4 +1,4 @@
-import { mount } from "marketing/MarketingApp";
+import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 // use this generic way to integrate mount function from subapp.
@@ -9,7 +9,7 @@ export default () => {
   const history = useHistory();
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
-      initialPath: history.location.pathname, // this does not require in marketing as default path is / but it is required in auth
+      initialPath: history.location.pathname, // if you remove it you will have to click twice on login button to display login
       // used for maintaining history in sub-app
       onNavigate: ({ pathname: nextPathName }) => {
         const { pathname } = history.location;

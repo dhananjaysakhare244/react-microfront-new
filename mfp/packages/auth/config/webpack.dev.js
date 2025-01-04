@@ -12,11 +12,10 @@ const devConfig = {
   devServer: {
     port: "5002",
     historyApiFallback: {
-      index: "/index.html",
+      historyApiFallback: true,
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
     new ModuleFederationPlugin({
       name: "auth", // global variable will be created with this name
       filename: "remoteEntry.js",
@@ -24,6 +23,9 @@ const devConfig = {
         "./AuthApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
     }),
   ],
 };
