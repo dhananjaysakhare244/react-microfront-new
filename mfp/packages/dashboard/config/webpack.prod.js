@@ -7,11 +7,11 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/dashboard/latest/", // pick it up from aws
+    publicPath: "/dashboard/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "dashboard", // global variable will be created with this name
+      name: "dashboard",
       filename: "remoteEntry.js",
       exposes: {
         "./DashboardApp": "./src/bootstrap",

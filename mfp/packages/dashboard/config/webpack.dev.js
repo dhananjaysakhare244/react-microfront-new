@@ -10,7 +10,7 @@ const devConfig = {
     publicPath: "http://localhost:5003/",
   },
   devServer: {
-    port: "5003",
+    port: 5003,
     historyApiFallback: {
       historyApiFallback: true,
     },
@@ -20,7 +20,7 @@ const devConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "dashboard", // global variable will be created with this name
+      name: "dashboard",
       filename: "remoteEntry.js",
       exposes: {
         "./DashboardApp": "./src/bootstrap",
