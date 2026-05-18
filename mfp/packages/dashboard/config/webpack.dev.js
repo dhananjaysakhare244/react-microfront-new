@@ -11,11 +11,18 @@ const devConfig = {
   },
   devServer: {
     port: 5003,
+    public: "localhost:5003",
+    hot: true,
+    liveReload: true,
+    watchOptions: {
+      ignored: /node_modules/,
+    },
     historyApiFallback: {
       historyApiFallback: true,
     },
     headers: {
       "Access-Control-Allow-Origin": "*",
+      "Cache-Control": "no-store",
     },
   },
   plugins: [
