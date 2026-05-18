@@ -12,7 +12,16 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
   //send out a notification to container that navigation happened in marketing
   if (onNavigate) history.listen(onNavigate);
-  ReactDOM.render(<App history={history} />, el);
+
+  const render = () => {
+    ReactDOM.render(<App history={history} />, el);
+  };
+
+  render();
+
+  if (module.hot) {
+    module.hot.accept("./App", render);
+  }
 
   return {
     onParentNavigate({ pathname: nextPathName }) {
