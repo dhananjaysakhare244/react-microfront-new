@@ -78,7 +78,7 @@ export default function Album() {
               align="center"
               color="textPrimary"
               gutterBottom>
-              Welcome Page Local
+              Home Page
             </Typography>
             <Typography
               variant="h5"
