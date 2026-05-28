@@ -7,7 +7,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/auth/latest/", // pick it up from aws
+    publicPath: "auto",
   },
   plugins: [
     new ModuleFederationPlugin({
