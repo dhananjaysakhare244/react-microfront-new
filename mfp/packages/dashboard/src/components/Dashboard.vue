@@ -101,7 +101,7 @@
           </li>
           <li>
             <Checkbox name="task" value="flight" v-model="tasksCheckbox" />
-            <span class="task-name">Flight Ticket</span>
+            <span class="task-name">Flight Tickets Test delete</span>
             <i class="pi pi-briefcase" />
           </li>
         </ul>
