@@ -24,7 +24,7 @@ export default () => {
   return (
     <Router history={history}>
       <StylesProvider generateClassName={generateClassName}>
-        <div>
+        <div id="header-id-test">
           <Header
             isSignedIn={isSignedIn}
             onSignOut={() => setIsSignedIn(false)}
